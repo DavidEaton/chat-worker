@@ -12,7 +12,7 @@ namespace TestingHelperLibrary.Fakers
             CustomInstantiator(faker =>
             {
                 var vendor = new VendorFaker(true);
-                var purchaseDate = faker.Date.Between(DateTime.Now.AddMonths(-1), DateTime.Now);
+                var purchaseDate = faker.Date.Between(DateTime.Now.AddMonths(-1), DateTime.Now.AddDays(-1));
                 var pONumber = $"PO-{faker.Finance.Account(10)}";
                 var vendorInvoiceNumber = $"INV-{faker.Finance.Account(10)}";
                 var partNumberFormat = "####-###-####";
